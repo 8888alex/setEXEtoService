@@ -6,4 +6,5 @@ net stop %input%
 del "%~dp0\%~nx1" /Q
 del "%~dp0\instsrv.exe" /Q
 del "%~dp0\_unsetService.bat" /Q
+reg delete HKLM\SYSTEM\CurrentControlSet\services\%input% /f
 pause
